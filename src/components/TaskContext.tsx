@@ -9,6 +9,7 @@ export const TaskContext = createContext<TaskContextType | null>(null);
 export const TaskProvider = ({ children }: { children: React.ReactNode }) => {
   const taskData = useLocalStorageTasks("taskLists");
 
+  // passing the taskdata as context so that all child can use it
   return (
     <TaskContext.Provider value={taskData}>
       {children}

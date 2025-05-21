@@ -6,6 +6,7 @@ const initialValue: TaskListType[] = [{
     name: "Task List 1",
     tasks: [],
   }];
+  
 function useLocalStorageTasks(key: string) {
   const [taskLists, setTaskLists] = useState<TaskListType[]>(() => {
     try {

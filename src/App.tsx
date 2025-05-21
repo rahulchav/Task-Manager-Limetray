@@ -4,11 +4,11 @@ import { useState } from "react";
 import TaskCard from "./components/TaskCard";
 
 function App() {
-
-  const [darkMode, setDarkMode] = useState(
-    document.documentElement.classList.contains("dark")
-  );
+  // dark mode state
+  const [darkMode, setDarkMode] = useState(document.documentElement.classList.contains("dark"));
+  // mobile side bar open state
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  // active Task list index
   const [activeTaskList, setActiveTaskList] = useState(0);
   return (
     <>
@@ -35,13 +35,14 @@ function App() {
             <IconMenu2 size={24} />
           </button>
 
-          {/* Sidebar */}
+          {/* Sidebar section */}
           <TaskList
             setActiveTaskList={setActiveTaskList}
             activeTaskList={activeTaskList}
             isMobileOpen={isMobileSidebarOpen}
             onClose={() => setMobileSidebarOpen(false)}
           />
+          {/* TaskCards main section */}
           <TaskCard
             activeTaskList={activeTaskList}
           />

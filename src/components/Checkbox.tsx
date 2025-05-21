@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { IconCheck } from '@tabler/icons-react';
 
 interface CustomCheckboxProps {
@@ -36,4 +36,4 @@ const CustomCheckbox: React.FC<CustomCheckboxProps> = ({ checked, onChange }) =>
   );
 };
 
-export default CustomCheckbox;
+export default memo(CustomCheckbox);

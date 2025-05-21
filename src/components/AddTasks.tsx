@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { IconPlus } from "@tabler/icons-react";
 import { useTaskContext } from "../stores/useTaskContext";
 
@@ -80,4 +80,4 @@ const AddTaskForm = ({ activeTaskList, onChange, externalOpen , setExternalOpen 
   );
 };
 
-export default AddTaskForm;
+export default memo(AddTaskForm);
