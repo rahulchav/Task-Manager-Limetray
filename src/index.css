@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main-bg: var(--main-bg);
+  --color-sec-bg: var(--card-bg);
+  --color-primary-font: var(--font-color);
+  --color-sec-font: var(--secondary-font);
+  --color-button-bg: var(--button-bg);
+  --color-app-color: var(--app-color);
+}
+
+
+:root {
+  /* Light Mode Colors */
+  --main-bg: #f5f5f5;
+  --card-bg: #ffffff;
+  --font-color: #000000;
+  --button-bg: #000000;
+  --app-color: oklch(62.7% 0.194 149.214);
+  --secondary-font: #7b7b7b;
+}
+
+.dark {
+  /* Dark Mode Colors */
+  --secondary-font: #c3c3c3;
+  --card-bg: oklch(27.8% 0.033 256.848);
+  --main-bg: oklch(21% 0.034 264.665);
+  --font-color: #ffffff;
+  --button-bg: #2b3448;
+}
